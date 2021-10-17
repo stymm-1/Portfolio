@@ -1107,6 +1107,40 @@ img{
     border: none;
   }
 
+  /* contact modal */
+  .wrap{
+    display:flex;
+    position:fixed;
+    align-items: center;
+    justify-content: center;
+    top:0;
+    z-index:2000;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .mod{
+    text-align: center;
+    padding:10px;
+    background-color: none;
+    color: white;
+  }
+  .mod img{
+    margin-bottom: 15px;
+  }
+
+  .mod p:nth-child(2){
+    font-size:25px;
+    margin-bottom: 8px;
+  }
+  .mod button{
+    margin-top:25px;
+  }
+  .display-none{
+    display:none;
+
+  }
+
 
 
 

@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+     -->
     <!--Icons-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!--Bootstrap CSS-->
@@ -498,25 +501,34 @@
                             <form action="#" method="POST" class="cf">
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <input type="text" name="message-name" class="form-control form__color mb-30 cf" placeholder="Your Name">
+                                        <input type="text" name="message-name" class="form-control form__color mb-30 cf cfname" placeholder="Your Name">
                                     </div> 
                                     <div class="col-lg-6">
-                                        <input type="email" name="message-email" class="form-control form__color mb-30 cf" placeholder="Your Email">
+                                        <input type="email" name="message-email" class="form-control form__color mb-30 cf cfemail" placeholder="Your Email">
                                     </div>
                                     <div class="col-12">
-                                        <input type="text" name="message-subject" class="form-control form__color mb-30 cf" placeholder="Subject">
+                                        <input type="text" name="message-subject" class="form-control form__color mb-30 cf cfsubject" placeholder="Subject">
                                     </div>
                                     <div class="col-12">
-                                        <textarea name="message" class="form-control form__color mb-30 cf" cols="30" rows="5" placeholder="Your Message"></textarea>
+                                        <textarea name="message" class="form-control form__color mb-30 cf cfmessage" cols="30" rows="5" placeholder="Your Message"></textarea>
                                     </div>
                                     <div class="col-12">
-                                        <button type="submit" class="button button--flex send-message form_button">
+                                        <button type="submit" class="button button--flex send-message form_button cfsubmit">
                                             Send Message
                                             <i class="uil uil-message button__icon"></i>
                                         </button>
                                     </div>
                                 </div>
                             </form>
+                        </div>
+                    </div>
+                    <!-- contact modal -->
+                    <div class="wrap display-none">
+                        <div class="mod">
+                            <img src="/assets/thank.svg" alt="Thank you">
+                            <p>Thank you for your submission</p>
+                            <p>We will be back in touch in 24-48 hours</p>
+                            <button class="button  button--white wclose">Close</button>
                         </div>
                     </div>
                 </section>
@@ -580,6 +592,8 @@
 </footer>
 
 
+   <!-- Firebase -->
+   <script type="module" src="JS/firebase.js"></script>
 
     <!--Argon Js-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js"></script>
